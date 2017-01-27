@@ -44,7 +44,7 @@ class PlansController extends AppController
     /**
      * Add method
      *
-     * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
+     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
     public function add()
     {
@@ -55,8 +55,9 @@ class PlansController extends AppController
                 $this->Flash->success(__('The plan has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('The plan could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The plan could not be saved. Please, try again.'));
         }
         $this->set(compact('plan'));
         $this->set('_serialize', ['plan']);
@@ -66,7 +67,7 @@ class PlansController extends AppController
      * Edit method
      *
      * @param string|null $id Plan id.
-     * @return \Cake\Network\Response|null Redirects on successful edit, renders view otherwise.
+     * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
@@ -80,8 +81,9 @@ class PlansController extends AppController
                 $this->Flash->success(__('The plan has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('The plan could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The plan could not be saved. Please, try again.'));
         }
         $this->set(compact('plan'));
         $this->set('_serialize', ['plan']);

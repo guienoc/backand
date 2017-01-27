@@ -17,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Plan|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\Plan patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Plan[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Plan findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Plan findOrCreate($search, callable $callback = null)
  */
 class PlansTable extends Table
 {
