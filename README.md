@@ -3,19 +3,16 @@
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](#)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](#)
 
-A Página io do projeto [Backand](https://lucianocantarelli.github.io/backand/).
-
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp?src=https://lucianocantarelli.github.io/backand/).
+A Página io do projeto [Backand](https://lucianocantarelli.github.io/Backand-Panel-for-Hosting/).
 
 
-MYSQL + CAKEPHP 3x
-
+Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
 
 
 ## Installation 
 
 
-1. fork #here now
+1. fork #here
 2. git clone #YourLink fork
 3. ../composer.phar install #/
 4. ./cake migrations migrate #/bin/
@@ -27,3 +24,7 @@ MYSQL + CAKEPHP 3x
 
 
 ## Password Users Seed = 1
+
+
+
+The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp?src=https://lucianocantarelli.github.io/Backand-Panel-for-Hosting/).
