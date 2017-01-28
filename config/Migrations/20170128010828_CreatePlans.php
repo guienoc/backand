@@ -31,7 +31,7 @@ class CreatePlans extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
-        $table->addColumn('number_of_domais', 'integer', [
+        $table->addColumn('number_of_domains', 'integer', [
             'default' => null,
             'limit' => 11,
             'null' => false,

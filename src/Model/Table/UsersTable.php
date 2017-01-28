@@ -5,21 +5,9 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Auth\DefaultPasswordHasher;
+use Cake\Event\Event;
 
-/**
- * Users Model
- *
- * @property \Cake\ORM\Association\BelongsTo $Plans
- * @property \Cake\ORM\Association\HasMany $Domains
- *
- * @method \App\Model\Entity\User get($primaryKey, $options = [])
- * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\User|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null)
- */
 class UsersTable extends Table
 {
 
@@ -60,15 +48,26 @@ class UsersTable extends Table
 
         $validator
             ->requirePresence('name', 'create')
-            ->notEmpty('name');
+            ->notEmpty('name','* Nome inválido');
 
         $validator
             ->requirePresence('username', 'create')
-            ->notEmpty('username');
+            ->notEmpty('username','* E-mail inválido')
+            ->add('username', 'unique', ['rule' => 'validateUnique', 'provider' => 'table',
+                'message' => '* E-mail já cadastrado. Tente recuperar sua senha no ajuda.'])
+            ->add('username', 'validFormat', [
+                'rule' => 'email',
+                'message' => '* E-mail inválido'
+            ]);
 
         $validator
             ->requirePresence('password', 'create')
-            ->notEmpty('password');
+            ->notEmpty('password','* Senha inválida')
+            ->add('password', 'validFormat', [
+                'rule' => ['minLength', 8],
+                'last' => true,
+                'message' => '* Sua senha está muito pequena, mínimo 8 dígitos.'
+            ]);
 
         $validator
             ->integer('status')
@@ -77,7 +76,13 @@ class UsersTable extends Table
 
         $validator
             ->requirePresence('cpf', 'create')
-            ->notEmpty('cpf');
+            ->notEmpty('cpf','* CPF inválido')            
+            ->add('cpf', 'validFormat',[
+                'rule'=> function ($value, $context) {
+                    return $this->validaCPF($value);
+                },
+                'message' => 'CPF não confere'
+                ]);
 
         $validator
             ->date('birth_date')
@@ -87,13 +92,7 @@ class UsersTable extends Table
         return $validator;
     }
 
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
+
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
@@ -101,4 +100,63 @@ class UsersTable extends Table
 
         return $rules;
     }
+
+    private function setPassword($password)
+    {
+        return (new DefaultPasswordHasher)->hash($password);
+    }
+
+    public function beforeSave(Event $event)
+   {
+       $entity = $event->data['entity'];
+        if ($entity->password) $entity->password = $this->setPassword($entity->password);
+       return true;
+   } 
+
+      private function validaCPF($cpf = null) 
+    {
+        // Verifica se um número foi informado
+        if(empty($cpf)) {
+            return false;
+        }
+     
+        // Elimina possivel mascara
+        $cpf = ereg_replace('[^0-9]', '', $cpf);
+        $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+         
+        // Verifica se o numero de digitos informados é igual a 11 
+        if (strlen($cpf) != 11) {
+            return false;
+        }
+        // Verifica se nenhuma das sequências invalidas abaixo 
+        // foi digitada. Caso afirmativo, retorna falso
+        else if ($cpf == '00000000000' || 
+            $cpf == '11111111111' || 
+            $cpf == '22222222222' || 
+            $cpf == '33333333333' || 
+            $cpf == '44444444444' || 
+            $cpf == '55555555555' || 
+            $cpf == '66666666666' || 
+            $cpf == '77777777777' || 
+            $cpf == '88888888888' || 
+            $cpf == '99999999999') {
+            return false;
+         // Calcula os digitos verificadores para verificar se o
+         // CPF é válido
+         } else {   
+             
+            for ($t = 9; $t < 11; $t++) {
+                 
+                for ($d = 0, $c = 0; $c < $t; $c++) {
+                    $d += $cpf{$c} * (($t + 1) - $c);
+                }
+                $d = ((10 * $d) % 11) % 10;
+                if ($cpf{$c} != $d) {
+                    return false;
+                }
+            }
+     
+            return true;
+        }
+    }    
 }
