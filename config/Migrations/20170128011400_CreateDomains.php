@@ -21,6 +21,7 @@ class CreateDomains extends AbstractMigration
             'default' => null,
             'limit' => 11,
             'null' => false,
+            'signed' => false,
         ]);
         $table->addColumn('name', 'string', [
             'default' => null,
@@ -31,6 +32,7 @@ class CreateDomains extends AbstractMigration
             'default' => null,
             'limit' => 11,
             'null' => false,
+            'signed' => false,
         ]);
       //  $table->addForeignKey('user_id', 'users', ['id']);
         $table->addColumn('created', 'datetime', [

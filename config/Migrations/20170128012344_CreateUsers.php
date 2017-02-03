@@ -21,6 +21,7 @@ class CreateUsers extends AbstractMigration
             'default' => null,
             'limit' => 11,
             'null' => false,
+            'signed' => false,
         ]);
         $table->addColumn('name', 'string', [
             'default' => null,
@@ -51,6 +52,7 @@ class CreateUsers extends AbstractMigration
             'default' => null,
             'limit' => 11,
             'null' => false,
+            'signed' => false,
         ]);
         $table->addColumn('birth_date', 'date', [
             'default' => null,
