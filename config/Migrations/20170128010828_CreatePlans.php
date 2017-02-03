@@ -21,6 +21,7 @@ class CreatePlans extends AbstractMigration
             'default' => null,
             'limit' => 11,
             'null' => false,
+            'signed' => false,
         ]);
         $table->addColumn('name', 'string', [
             'default' => null,
@@ -29,6 +30,8 @@ class CreatePlans extends AbstractMigration
         ]);
         $table->addColumn('price', 'decimal', [
             'default' => null,
+            'precision' => 5,
+            'scale' => 2,
             'null' => false,
         ]);
         $table->addColumn('number_of_domains', 'integer', [
