@@ -24,7 +24,6 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 2. git clone #YourLink fork
 3. ../composer.phar install #/
 4. ./cake migrations migrate #/bin/
-5. ALTER TABLE `plans` CHANGE `price` `price` DECIMAL(5,2) NOT NULL; #Database phpMyAdmin
 6. ./cake migrations seed #/bin/
 7. modified #Your contribution >_code
 8. git add | git commit | git push #/
