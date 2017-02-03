@@ -11,7 +11,6 @@ A Page github.io [Backand](https://lucianocantarelli.github.io/Backand-Panel-for
 
 ``` bash
 $ composer require cakephp/cakephp:"~3.3"
-
 ```
 Download [Composer](http://getcomposer.org/?src=https://lucianocantarelli.github.io/Backand-Panel-for-Hosting/) or update `composer self-update`.
 
@@ -34,7 +33,6 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ``` bash
 $ Password Users Seed = 1
-
 ```
 
 
