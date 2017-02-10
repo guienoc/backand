@@ -113,7 +113,7 @@ class UsersTable extends Table
        return true;
    } 
 
-      private function validaCPF($cpf = null) 
+    private function validaCPF($cpf = null) 
     {
         // Verifica se um número foi informado
         if(empty($cpf)) {

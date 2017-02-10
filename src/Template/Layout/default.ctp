@@ -35,45 +35,11 @@
                 <div class="col-sm-6 no-padding-right">
                     <section class="header-info">
                         <h6>
-                            <a class="popup-with-form" href="#test-form"><i class="fa"><img src="site-layout/img/icon-2.png" alt="icon"></i> Login</a>
                             <a href="<?=$this->Html->Url->build(['action'=>'suporte'])?>"><i class="fa fa-location-arrow"></i> Suporte</a>
                             <a href="mailto:contato@backand.com.br"><i class="fa fa-envelope"></i>contato@backand.com.br</a>
                         </h6>                       
                     </section>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- 
-    *******************
-       LOGIN   
-    ****************** 
-    -->
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-6">
-                <!-- form itself -->
-        <form action="#" id="test-form" class="mfp-hide white-popup-block login-form">
-        
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-1">
-                    <div class="wrapper">
-                        <h3 class="title">Log in</h3>
-                        <div class="subtitle">Please fill in your basic info:</div>
-                        <div><input type="text" name="username" placeholder="Username" class="field" autocomplete="off" required></div>
-                        <div><input type="password" name="password" placeholder="Password" class="field" autocomplete="off" required></div>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-xs-center">
-                    <label class="label-form"><input type="checkbox" class="btn-check">Remember me</label>
-                    <input type="submit" class="wpc-btn" value="log in">
-                </div>
-            </div>
-            
-        </form>
             </div>
         </div>
     </div>
@@ -95,10 +61,6 @@
                         </button>
                         <ul class="main-menu pull-right no-margin">
 
-                            <li class="menu-item active">
-                                <a href="<?=$this->Html->Url->build(['action'=>'index'])?>">HOME</a>
-                            </li>
-
                             <li class="menu-item">
                                 <a href="<?=$this->Html->Url->build(['action'=>'servicos'])?>">SERVIÇOS</a>
                             </li>
@@ -111,7 +73,7 @@
                             </li>
 
                             <li class="menu-item registrar">
-                                <a href="<?=$this->Html->Url->build(['action'=>'registrar'])?>">REGISTRAR</a>
+                                <a href="<?=$this->Html->Url->build(['action'=>'registrar'])?>">Área do Cliente</a>
                             </li>
 
                         </ul>
