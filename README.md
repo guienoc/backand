@@ -6,7 +6,7 @@
 A Page github.io [Backand](https://lucianocantarelli.github.io/Backand-Panel-for-Hosting/?src=https://github.com/LucianoCantarelli/Backand-Panel-for-Hosting).
 
 
-## Require
+## RequireS
 
 
 ``` bash
