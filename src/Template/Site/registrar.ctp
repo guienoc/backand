@@ -1,9 +1,6 @@
-<!-- 
-*******************
-	TOP BANNER
-****************** 
--->
-
+<?
+$this->assign('title','Backand - Entrar na sua conta ou criar um novo cadastro');
+?>
 <div class="wpc-top-header overlay img-bg">
 	<img src="site-layout/img/top-banner.jpg" alt="banner" class="hidden">
 	<div class="container-fluid">
@@ -12,78 +9,43 @@
 				<div class="wrapper">
 					<div class="heading">Registrar</div>
 					<div class="subheding">
-						<a href="index.html" class="link">home</a><span class="round"></span>
-						<a href="register.html" class="link active">Registrar</a>
+						<a href="<?=$this->Url->build(['action'=>'index'])?>" class="link">home</a><span class="round"></span>
+						<a href="javascript:;" class="link active">Registrar</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-
-<!-- 
-*******************
-  REGISTER  
-*******************
--->
-
 
 <div class="wpc-register">
 	<div class="container no-padding-sm">
 		<div class="row">
 			<div class="col-md-6">
-				<form action="#" class="wpc-comments-form">
-					<div class="title-form">login to your account</div>
-					<div class="subtitle">If you already have an account please login.</div>
-					<input type="text" name="username" placeholder="Enter Username" class="input" required>
-					<input type="password" name="password" placeholder="Enter Password" class="input password" required>
-					<label class="label-form"><input type="checkbox" class="btn-check">Remember me</label><br class="visible-xs-mobile">
-					<a href="" class="link">Forgot my password</a>
-					<input type="submit" class="wpc-btn" value="log in">
-				</form>
+				<?=$this->Form->create(null,['class'=>'wpc-comments-form','url'=>['action'=>'sendLogin']]);?>
+					<div class="title-form">Entrar na sua conta</div>
+					<div class="subtitle">Área privada para gerenciar seus sites.</div>
+					<?=$this->Form->email('username',['placeholder'=>'E-mail', 'class'=>'input','required'])?>
+					<?=$this->Form->password('password',['placeholder'=>'Senha', 'class'=>'input password','required'])?>
+					<div class="text-right text-xs-left">
+						<input type="submit" class="wpc-btn" value="Entrar">
+					</div>
+				<?=$this->Form->end();?>
 			</div>
 			<div class="col-md-6">
-				<form action="#" class="wpc-comments-form">
-					<div class="title-form">Sign up for an account</div>
-					<div class="subtitle">Signing up it’s easy and will take only a few moments.</div>
-					<input type="text" name="username" placeholder="Enter Username" class="input" required>
-					<input type="password" name="password" placeholder="Enter Password" class="input" required>
-					<input type="password" name="repeatpassword" placeholder="Re-Enter Password" class="input" value="" required>
-					<input type="email" name="email" placeholder="Enter Your E-mail" class="input email" required>
+				<?=$this->Form->create($user,['class'=>'wpc-comments-form'])?>
+					<div class="title-form">Registre uma conta agora</div>
+					<div class="subtitle">Faça seu cadastro e veja como gerenciar seus sites é muito fácil.</div>
+					<?=$this->Form->text('name',['placeholder'=>'Nome','class'=>'input','required'])?>
+					<?=$this->Form->email('username',['placeholder'=>'E-mail','class'=>'input','required'])?>
+					<?=$this->Form->password('password',['placeholder'=>'Senha', 'class'=>'input password','required'])?>
 					<div class="text-right text-xs-left">
 						<input type="submit" class="wpc-btn" value="sign up">
 					</div>
-				</form>
+				<?=$this->Form->end()?>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-<!-- 
-*******************
-	SUBSCRIBE
-****************** 
--->
-
-
-<div class="wpc-subcribe">	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-11 col-md-offset-1 col-xs-12">
-				<h1 class="heading">Sign up to Newsletter for get special offers</h1>
-			</div>
-		</div>
-		<div class="row">
-			<form action="#" class="form">
-				<div class="col-md-7 col-md-offset-1 col-sm-7 col-xs-12">
-					<input type="email" name="email" placeholder="Enter your email Lorem ipsum dolor sit amet" class="email-input">
-				</div>
-				<div class="col-sm-4 col-xs-12  text-xs-center">
-					<input type="submit" value="Sign Up" class="wpc-btn">
-				</div>
-			</form>
-		</div>
-	</div>
-</div>

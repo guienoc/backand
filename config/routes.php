@@ -18,4 +18,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->fallbacks(DashedRoute::class);
 });
 
+Router::prefix('admin', function($routes) {
+    $routes->connect('/', ['controller' => 'Painel', 'action' => 'index']);
+    $routes->fallbacks('DashedRoute');
+});
+
 Plugin::routes();

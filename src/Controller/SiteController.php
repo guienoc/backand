@@ -32,7 +32,24 @@ class SiteController extends AppController
 
     public function registrar()
     {
-
+        $this->loadModel('Users');
+        $user = $this->Users->newEntity();
+        $this->set(compact('user'));
+    }
+    public function sendLogin()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Session->write('auth_user',$user);
+                $this->Auth->setUser($user);
+                return $this->redirect(['prefix'=>'admin','controller'=>'Users','action'=>'index']);
+            } else {
+                $this->Flash->error('Usuário ou senha inválidos.');
+            }
+        } else {
+            return $this->redirect(['action'=>'registrar']);
+        }
     }
 
     public function suporte()
