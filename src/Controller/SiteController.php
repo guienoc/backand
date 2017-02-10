@@ -41,9 +41,8 @@ class SiteController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
-                $this->Session->write('auth_user',$user);
                 $this->Auth->setUser($user);
-                return $this->redirect(['prefix'=>'admin','controller'=>'Users','action'=>'index']);
+                return $this->redirect(['prefix'=>'admin','controller'=>'Painel','action'=>'index']);
             } else {
                 $this->Flash->error('Usuário ou senha inválidos.');
             }
