@@ -26,7 +26,7 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ``` bash
 git clone https://username.github.io/Backand-Panel-for-Hosting/
 ```
-3. composer install #/
+3 . composer install #/
 ``` bash
 ../composer.phar install
 ```
