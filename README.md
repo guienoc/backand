@@ -30,7 +30,11 @@ git clone https://username.github.io/Backand-Panel-for-Hosting/
 ``` bash
 ../composer.phar install
 ```
-4. Migrations #/bin/
+4. Config Datasources #/config/app.php
+```
+username, password, database #Mysql
+```
+5. Migrations #/bin/
 ``` bash
 ./cake migrations migrate
 ```
