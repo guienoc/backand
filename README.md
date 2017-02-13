@@ -22,29 +22,36 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 1. fork 
 
-2. git clone #Backand-Panel-for-Hosting fork
+2 git clone #Backand-Panel-for-Hosting fork
 ``` bash
 git clone https://username.github.io/Backand-Panel-for-Hosting/
 ```
-3 . composer install #/
+
+3 composer install #/
 ``` bash
 ../composer.phar install
 ```
-4. Config Datasources #/config/app.php
-```
+
+4 Config Datasources #/config/app.php
+
 username, password, database #Mysql
-```
-5. Migrations #/bin/
+
+
+5 Migrations #/bin/
 ``` bash
 ./cake migrations migrate
 ```
-6. Seeds #/bin/
+
+6 Seeds #/bin/
 ``` bash
 ./cake migrations seed #/bin/
 ```
-7. Your contribution 
-8. Git push
-9. Pull requests #Your fork
+
+7 Your contribution 
+
+8 Git push
+
+9 Pull requests #Your fork
 
 
 **
