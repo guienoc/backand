@@ -50,6 +50,11 @@ class SiteController extends AppController
             return $this->redirect(['action'=>'registrar']);
         }
     }
+    public function logout()
+    {
+        $this->Auth->logout();
+        return $this->redirect(['action'=>'index']);
+    }
 
     public function suporte()
     {

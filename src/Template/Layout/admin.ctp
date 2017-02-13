@@ -21,30 +21,6 @@
     <?= $this->fetch('css') ?>
   </head>
   <body>
-
-    <div class="wpc-main-header">
-        <div class="container no-padding-sm">
-            <div class="row">
-                <div class="col-sm-6 no-padding">
-                    <div class="soc-icons">
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                        <a href=""><i class="fa fa-linkedin"></i></a>
-                        <a href=""><i class="fa fa-google-plus"></i></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 no-padding-right">
-                    <section class="header-info">
-                        <h6>
-                            <a href="<?=$this->Html->Url->build(['action'=>'suporte'])?>"><i class="fa fa-location-arrow"></i> Suporte</a>
-                            <a href="mailto:contato@backand.com.br"><i class="fa fa-envelope"></i>contato@backand.com.br</a>
-                        </h6>                       
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="wpc-menu-wrap">
         <div class="container">
             <div class="row">
@@ -61,20 +37,23 @@
                             <span class="icon"></span>
                         </button>
                         <ul class="main-menu pull-right no-margin">
+                            <? $active = ($controller=='Painel')? ' active':''; ?>
+                            <li class="menu-item<?=$active?>">
+                                <a href="<?=$this->Html->Url->build(['controller'=>'Painel'])?>">PAINEL</a>
+                            </li>
 
-                            <li class="menu-item">
-                                <a href="<?=$this->Html->Url->build(['action'=>'servicos'])?>">SERVIÇOS</a>
+                            <? $active = ($controller=='MeusSites')? ' active':''; ?>
+                            <li class="menu-item<?=$active?>">
+                                <a href="<?=$this->Html->Url->build(['controller'=>'MeusSites'])?>">MEUS SITES</a>
+                            </li>
+
+                            <? $active = ($controller=='Configuracoes')? ' active':''; ?>
+                            <li class="menu-item<?=$active?>">
+                                <a href="<?=$this->Html->Url->build(['controller'=>'Configuracoes'])?>">CONFIGURAÇÕES</a>
                             </li>
 
                             <li class="menu-item">
-                                <a href="<?=$this->Html->Url->build(['action'=>'faq'])?>">FAQ</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="<?=$this->Html->Url->build(['action'=>'contato'])?>">CONTATO</a>
-                            </li>
-
-                            <li class="menu-item registrar">
-                                <a href="<?=$this->Html->Url->build(['action'=>'registrar'])?>">Área do Cliente</a>
+                                <a href="<?=$this->Html->Url->build(['prefix'=>false,'controller'=>'Site','action'=>'logout'])?>">Sair</a>
                             </li>
 
                         </ul>

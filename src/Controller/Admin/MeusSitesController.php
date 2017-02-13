@@ -3,7 +3,7 @@ namespace App\Controller\Admin;
 
 use App\Controller\Admin\AdminAppController;
 
-class PainelController extends AdminAppController
+class MeusSitesController extends AdminAppController
 {
 	public function index()
     {
