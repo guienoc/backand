@@ -4627,8 +4627,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 @media (max-width: 767px) {
     .wpc-top-header {
@@ -4639,7 +4639,7 @@ body {
     background-color: rgba(31, 37, 50, 0.7);
 }
 .wpc-top-header .wrapper .heading {
-    font: bold 48px "Raleway", sans-serif;
+    font: bold 30px "Raleway", sans-serif;
     text-transform: capitalize;
     color: #fff;
     margin-bottom: 10px;
@@ -4655,7 +4655,7 @@ body {
     }
 }
 .wpc-top-header .wrapper .subheding {
-    font-size: 24px;
+    font-size: 15px;
     text-transform: capitalize;
     color: #fff;
 }
@@ -4693,7 +4693,7 @@ body {
     display: inline-block;
     border-radius: 3px;
     position: absolute;
-    top: 16px;
+    top: 8px;
     left: 2px;
 }
 @media (max-width: 1199px) {
