@@ -23,12 +23,7 @@ class AppController extends Controller
 
     public function beforeRender(Event $event)
     {
-<<<<<<< HEAD
-        
-=======
         $auth_user = $this->Auth->user();
-
->>>>>>> cf25a91f4c3a984046c11bc8ab59c8399707953d
         $base = 'http://' . getenv('HTTP_HOST');
         $controller = $this->request->controller;
         $action = $this->request->action;
