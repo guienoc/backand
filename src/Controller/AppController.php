@@ -5,7 +5,6 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 
-
 class AppController extends Controller
 {
     protected $Session;
@@ -24,6 +23,7 @@ class AppController extends Controller
 
     public function beforeRender(Event $event)
     {
+        
         $base = 'http://' . getenv('HTTP_HOST');
         $controller = $this->request->controller;
         $action = $this->request->action;
