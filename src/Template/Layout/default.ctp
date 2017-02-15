@@ -74,7 +74,14 @@
                             </li>
 
                             <li class="menu-item registrar">
-                                <a href="<?=$this->Html->Url->build(['action'=>'registrar'])?>">Área do Cliente</a>
+                                <?
+                                if ($auth_user) {
+                                    $url = $this->Html->Url->build(['prefix'=>'admin','controller'=>'Painel' ,'action'=>'index']);
+                                } else {
+                                    $url = $this->Html->Url->build(['action'=>'registrar']);
+                                }
+                                ?>
+                                <a href="<?=$url?>">Área do Cliente</a>
                             </li>
 
                         </ul>
