@@ -24,10 +24,12 @@ class AppController extends Controller
 
     public function beforeRender(Event $event)
     {
+        $auth_user = $this->Auth->user();
+
         $base = 'http://' . getenv('HTTP_HOST');
         $controller = $this->request->controller;
         $action = $this->request->action;
-        $this->set(compact('base','controller','action'));
+        $this->set(compact('base','controller','action','auth_user'));
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {

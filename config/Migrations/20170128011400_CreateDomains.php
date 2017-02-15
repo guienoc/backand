@@ -34,7 +34,6 @@ class CreateDomains extends AbstractMigration
             'null' => false,
             'signed' => false,
         ]);
-      //  $table->addForeignKey('user_id', 'users', ['id']);
         $table->addColumn('created', 'datetime', [
             'default' => null,
             'null' => false,
@@ -43,6 +42,12 @@ class CreateDomains extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
+
+        $table->addColumn('expiration_date', 'date', [
+            'default' => null,
+            'null' => false,
+        ]);
+
         $table->addIndex([
             'name',
         ], [

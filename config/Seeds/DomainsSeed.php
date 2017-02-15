@@ -23,13 +23,15 @@ class DomainsSeed extends AbstractSeed
                 'name' => 'lucianocantarelli.com.br',
                 'user_id' => 1,
                 'created' => date('Y-m-d H:i:s'),
-                'modified' => date('Y-m-d H:i:s')                
+                'modified' => date('Y-m-d H:i:s'),
+                'expiration_date' => date('Y-m-d', strtotime(date('Y-m-d') . '+1 years'))           
             ],
             [
                 'name' => 'enoc.com.br',
                 'user_id' => 2,
                 'created' => date('Y-m-d H:i:s'),
-                'modified' => date('Y-m-d H:i:s')
+                'modified' => date('Y-m-d H:i:s'),
+                'expiration_date' => date('Y-m-d', strtotime(date('Y-m-d') . '+1 years'))
             ],            
         ];
 
