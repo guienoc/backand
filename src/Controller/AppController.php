@@ -8,6 +8,11 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
     protected $Session;
+    protected $auth_user;
+    protected $base;
+    protected $controller;
+    protected $action;
+
     public function initialize()
     {
         parent::initialize();
@@ -23,7 +28,7 @@ class AppController extends Controller
 
     public function beforeRender(Event $event)
     {
-        $auth_user = $this->Auth->user();
+        $auth_user = $this->Auth->user();        
         $base = 'http://' . getenv('HTTP_HOST');
         $controller = $this->request->controller;
         $action = $this->request->action;

@@ -10,4 +10,6 @@ class AdminAppController extends AppController {
 		$this->viewBuilder()->layout('admin');
 		parent::beforeRender($event);
 	}
+
+
 }
