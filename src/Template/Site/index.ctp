@@ -10,10 +10,10 @@
             <div class="wpc-top-banner overlay img-bg">
                 <img src="site-layout/img/banner-1.jpg" alt="banner" class="hidden">
                 <div class="container no-padding-sm">
-                    <div class="heading">We Help You <br class="hidden-xs"> to Build Your Dream Website</div>
-                    <h3 class="subheading">Get amazing results working with the best programmers, de- <br class="hidden-xs"> 
-                    signers writers and other top online pros. Hire freelancers <br class="hidden-xs"> with confidence.</h3>
-                    <a href="" class="wpc-btn">Check our prices</a>
+                    <div class="heading">R$ 4,99<br class="hidden-xs"> Comece agora</div>
+                    <h3 class="subheading">Hospede sites, e tenha resultados incríveis! <br class="hidden-xs"> 
+                    Agora é a hora! <br class="hidden-xs"></h3>
+                    <a href="#começar" class="wpc-btn">Começar</a>
                 </div>
             </div>
         </div>
@@ -83,62 +83,49 @@
 
 <!-- 
 *******************
-    PRICING   
+    Começar   
 ****************** 
 -->
-
+<a name="começar"></a>
 <div class="wpc-pricing">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="heading">Choose Your Plan</div>
-                <h3 class="subheading">Lorem ipsum dolor</h3>
+                <div class="heading">Iniciar o Backand</div>
+                <h3 class="subheading">Clique na primeira opção </h3>
+
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 no-padding">
-                <div class="wrapper first">
-                    <div class="title">
-                    Basic plan
-                    </div>
-                    <div class="price"><sup>$</sup>3.99</div>
-                    <div class="period">per month</div>
-                    <ul class="list-info">
-                        <li>50 GB Disk Space</li>
-                        <li>100 GB Bandwidth</li>
-                        <li>free domain registration</li>
-                    </ul>
-                    <a href="" class="wpc-btn">get started</a>
-                </div>
-            </div> 
-            <div class="col-sm-4 no-padding">
+
+            <div class="col-sm-8 no-padding">
                 <div class="wrapper active">
                     <div class="title">
-                    premium plan
+                    Plano Fácil
                     </div>
-                    <div class="price"><sup>$</sup>5.99</div>
-                    <div class="period">per month</div>
+                    <div class="price"><sup>$</sup>4.99</div>
+                    <div class="period">por mês</div>
                     <ul class="list-info">
-                        <li>50 GB Disk Space</li>
-                        <li>100 GB Bandwidth</li>
-                        <li>free domain registration</li>
+                        <li>50 MB espaço</li>
+                        <li>Transferência livre</li>
+                        <li>Suporte Chamado</li>
                     </ul>
-                    <a href="" class="wpc-btn">get started</a>
+                    <a href="" class="wpc-btn">Começar</a>
                 </div>
             </div>
             <div class="col-sm-4 no-padding">
                 <div class="wrapper third">
                     <div class="title">
-                    Gold plan
+                    Plano Back
                     </div>
-                    <div class="price"><sup>$</sup>8.99</div>
-                    <div class="period">per month</div>
+                    <div class="price"><sup>R$</sup>69.90</div>
+                    <div class="period">por mês</div>
                     <ul class="list-info">
-                        <li>50 GB Disk Space</li>
-                        <li>100 GB Bandwidth</li>
-                        <li>free domain registration</li>
+                        <li>500 MB espaço</li>
+                        <li>Transferência livre</li>
+                        <li>Suporte Chat</li>
                     </ul>
-                    <a href="" class="wpc-btn">get started</a>
+                    <a href="" class="wpc-btn">Começar</a>
                 </div>
             </div>
         </div>
@@ -152,19 +139,19 @@
                 <div class="container no-padding">
                     <img src="site-layout/img/hand.png" alt="hand" class="hidden">
                     <div class="heading-section">
-                    Our Services
+                    Serviços Complementares
                     </div>
                     <h3 class="section-subheading">
-                        Lorem ipsum dolor
+                        Dos mesmos criadores de Backand
                     </h3>
                     <div class="tabs offers-tabs">
                         <div class="tabs-header">
                             <ul>
-                                <li class="active">shared</li>
-                                <li>dedicated</li>
-                                <li>cloud</li>
-                                <li>domains</li>
-                                <li>ecommerce</li>
+                                <li class="active">site</li>
+                                <li>sistema</li>
+                                <li>aplicativo</li>
+                                <li>marketing</li>
+                                <li>coaching</li>
                             </ul>
                         </div>
                         <div class="tabs-content">
@@ -175,7 +162,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="heading">
-                                        Our web hosting packages provide a top-notch experience with unlimited resources
+                                        Our web site packages provide a top-notch experience with unlimited resources
                                         </div>
                                         <div class="info">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make. a type specimen book.
@@ -191,7 +178,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="heading">
-                                            Web hosting packages provide quality web hosting with unlimited resources.
+                                            Web sistema packages provide quality web hosting with unlimited resources.
                                         </div>
                                         <div class="info">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make. a type specimen book.
@@ -207,7 +194,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="heading">
-                                            Web hosting packages provide quality web hosting with unlimited resources.
+                                            Web aplicativo packages provide quality web hosting with unlimited resources.
                                         </div>
                                         <div class="info">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make. a type specimen book.
@@ -223,7 +210,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="heading">
-                                            Web hosting packages provide quality web hosting with unlimited resources.
+                                            Web marketing packages provide quality web hosting with unlimited resources.
                                         </div>
                                         <div class="info">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make. a type specimen book.
@@ -239,7 +226,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="heading">
-                                            Web hosting packages provide quality web hosting with unlimited resources.
+                                            Web coaching packages provide quality web hosting with unlimited resources.
                                         </div>
                                         <div class="info">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make. a type specimen book.

@@ -22,29 +22,6 @@
   </head>
   <body>
 
-    <div class="wpc-main-header">
-        <div class="container no-padding-sm">
-            <div class="row">
-                <div class="col-sm-6 no-padding">
-                    <div class="soc-icons">
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                        <a href=""><i class="fa fa-linkedin"></i></a>
-                        <a href=""><i class="fa fa-google-plus"></i></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 no-padding-right">
-                    <section class="header-info">
-                        <h6>
-                            <a href="<?=$this->Html->Url->build(['action'=>'suporte'])?>"><i class="fa fa-location-arrow"></i> Suporte</a>
-                            <a href="mailto:contato@backand.com.br"><i class="fa fa-envelope"></i>contato@backand.com.br</a>
-                        </h6>                       
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="wpc-menu-wrap">
         <div class="container">
             <div class="row">
