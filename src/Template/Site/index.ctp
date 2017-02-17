@@ -98,7 +98,7 @@
         </div>
         <div class="row">
 
-            <div class="col-sm-8 no-padding">
+            <div class="col-sm-4 col-sm-offset-2 no-padding">
                 <div class="wrapper active">
                     <div class="title">
                     Plano Fácil

@@ -15,6 +15,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/contato', ['controller' => 'Site', 'action' => 'contato']);
     $routes->connect('/servicos', ['controller' => 'Site', 'action' => 'servicos']);
     $routes->connect('/suporte', ['controller' => 'Site', 'action' => 'suporte']);
+    $routes->connect('/area-do-cliente', ['controller' => 'Site', 'action' => 'areaDoCliente']);
     $routes->fallbacks(DashedRoute::class);
 });
 

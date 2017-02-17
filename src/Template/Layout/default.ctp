@@ -23,6 +23,39 @@
   <body>
 
     <div class="wpc-menu-wrap">
+
+        <div class="wpc-main-header">
+            <div class="container no-padding-sm">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <div class="soc-icons">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 no-padding-right">
+                        <section class="header-info">
+                            <h6>
+                                <?
+                                if ($auth_user) {
+                                    $url = $this->Html->Url->build(['prefix'=>'admin','controller'=>'Painel' ,'action'=>'index']);
+                                } else {
+                                    $url = $this->Html->Url->build(['action'=>'areaDoCliente']);
+                                }
+                                ?>
+                                <a href="<?=$url?>">
+                                    <i class="fa"><img src="site-layout/img/icon-2.png" alt="icon"></i> Área do cliente
+                                </a>
+                                <a href="<?=$this->Url->build(['action'=>'contato'])?>"><i class="fa fa-envelope"></i>Contato</a>
+                            </h6>                       
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-3 no-padding">
@@ -40,25 +73,19 @@
                         <ul class="main-menu pull-right no-margin">
 
                             <li class="menu-item">
+                                <a href="<?=$this->Html->Url->build(['action'=>'index'])?>">HOME</a>
+                            </li>
+
+                            <li class="menu-item">
                                 <a href="<?=$this->Html->Url->build(['action'=>'servicos'])?>">SERVIÇOS</a>
                             </li>
 
                             <li class="menu-item">
                                 <a href="<?=$this->Html->Url->build(['action'=>'faq'])?>">FAQ</a>
                             </li>
-                            <li class="menu-item">
-                                <a href="<?=$this->Html->Url->build(['action'=>'contato'])?>">CONTATO</a>
-                            </li>
 
                             <li class="menu-item registrar">
-                                <?
-                                if ($auth_user) {
-                                    $url = $this->Html->Url->build(['prefix'=>'admin','controller'=>'Painel' ,'action'=>'index']);
-                                } else {
-                                    $url = $this->Html->Url->build(['action'=>'registrar']);
-                                }
-                                ?>
-                                <a href="<?=$url?>">Área do Cliente</a>
+                                <a href="<?=$this->Html->Url->build(['action'=>'registrar'])?>">Registrar</a>
                             </li>
 
                         </ul>
