@@ -25,10 +25,9 @@ class UsersTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
-        $this->belongsTo('Plans', [
-            'foreignKey' => 'plan_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->addBehavior('Timestamp');
+
+
         $this->hasMany('Domains', [
             'foreignKey' => 'user_id'
         ]);
@@ -96,7 +95,7 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
-        $rules->add($rules->existsIn(['plan_id'], 'Plans'));
+        $rules->add($rules->isUnique(['cpf']));
 
         return $rules;
     }

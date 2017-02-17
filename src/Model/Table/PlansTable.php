@@ -36,7 +36,7 @@ class PlansTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
-        $this->hasMany('Users', [
+        $this->hasMany('Domains', [
             'foreignKey' => 'plan_id'
         ]);
     }
@@ -61,11 +61,6 @@ class PlansTable extends Table
             ->numeric('price')
             ->requirePresence('price', 'create')
             ->notEmpty('price');
-
-        $validator
-            ->integer('number_of_domains')
-            ->requirePresence('number_of_domains', 'create')
-            ->notEmpty('number_of_domains');
 
         $validator
             ->requirePresence('description', 'create')

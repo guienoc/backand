@@ -17,17 +17,17 @@ $this->assign('title','Backand Admin - Meus Domínios');
 <div class="wpc-cart">
     <div class="container">
         <div class="row">  
+                <?= $this->Form->create($domain,['url' => ['controller' => 'MeusSites', 'action' => 'adicionar'],'class'=> "wpc-comments-form"]) ?>
 
-
-            <div class="col-sm-12 text-right">
-                <?= $this->Form->create($domain,['url' => ['controller' => 'MeusSites', 'action' => 'adicionar'],'class' => "wpc-comments-form"]) ?>
+            <div class="col-sm-4 col-sm-offset-6 text-right">
                 <?php
-                echo $this->Form->text('name',['placeholder' => 'Novo Domínio: ','label' => false,'class' => 'wpc-btn email-input']);
+                echo $this->Form->text('name',['placeholder' => 'Novo Domínio: ','label' => false,'class' => 'input']);
                 ?>
+            </div>    
+            <div class="col-sm-2 text-right">
                 <button class="wpc-btn"  type="submit"> ADICIONAR</button>
                 <?= $this->Form->end() ?> 
             </div>    
-
 
         </div><br/>
         <div class="row">

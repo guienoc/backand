@@ -44,6 +44,10 @@ class DomainsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('Plans', [
+            'foreignKey' => 'plan_id',
+            'joinType' => 'INNER'
+        ]);        
     }
 
     /**
@@ -63,6 +67,11 @@ class DomainsTable extends Table
             ->notEmpty('name')
             ->add('name', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
+        $validator
+            ->date('expiration_date')
+            ->requirePresence('expiration_date', 'create')
+            ->notEmpty('expiration_date');
+            
         return $validator;
     }
 
@@ -77,6 +86,7 @@ class DomainsTable extends Table
     {
         $rules->add($rules->isUnique(['name']));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
+        $rules->add($rules->existsIn(['plan_id'], 'Plans'));
 
         return $rules;
     }
