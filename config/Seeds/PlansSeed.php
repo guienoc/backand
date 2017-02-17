@@ -20,25 +20,16 @@ class PlansSeed extends AbstractSeed
     {
         $data = [
             [
-                'name' => 'Plan BASIC',
-                'price' => '5.90',
-                'number_of_domains' => 1,
+                'name' => 'Plano FÁCIL',
+                'price' => '4.99',
                 'description' => 'O plano básico refere-se a 1 domínio e 50MB de espaço com 1 banco de dados (MYSQL)',
                 'order' => 0
             ],
             [
-                'name' => 'Plan PREMIUM',
-                'price' => '35.90',
-                'number_of_domains' => 10,
+                'name' => 'Plano BLACK',
+                'price' => '19.90',
                 'description' => 'O plano básico refere-se a 10 domínios e 600MB de espaço com 10 banco de dados (MYSQL)',
                 'order' => 1
-            ],
-            [
-                'name' => 'Plan GOLD',
-                'price' => '65.90',
-                'number_of_domains' => 30,
-                'description' => 'O plano básico refere-se a 30 domínios e 1GB de espaço com 30 banco de dados (MYSQL)',
-                'order' => 2
             ],
         ];
 

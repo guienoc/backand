@@ -26,7 +26,6 @@ class UsersSeed extends AbstractSeed
                 'password' => (new DefaultPasswordHasher)->hash('1'),
                 'status' => 1,
                 'cpf' => '758.830.971-70',
-                'plan_id' => 1,
                 'birth_date' => date('Y-m-d'),
                 'created' => date('Y-m-d H:i:s'),
                 'modified' => date('Y-m-d H:i:s')
@@ -37,7 +36,6 @@ class UsersSeed extends AbstractSeed
                 'password' => (new DefaultPasswordHasher)->hash('1'),
                 'status' => 1,
                 'cpf' => '369.979.285-44',
-                'plan_id' => 1,
                 'birth_date' => date('Y-m-d'),
                 'created' => date('Y-m-d H:i:s'),
                 'modified' => date('Y-m-d H:i:s')
@@ -48,7 +46,6 @@ class UsersSeed extends AbstractSeed
                 'password' => (new DefaultPasswordHasher)->hash('1'),
                 'status' => 1,
                 'cpf' => '061.372.616-20',
-                'plan_id' => 2,
                 'birth_date' => date('Y-m-d'),
                 'created' => date('Y-m-d H:i:s'),
                 'modified' => date('Y-m-d H:i:s')
@@ -59,7 +56,6 @@ class UsersSeed extends AbstractSeed
                 'password' => (new DefaultPasswordHasher)->hash('1'),
                 'status' => 1,
                 'cpf' => '226.232.457-38',
-                'plan_id' => 3,
                 'birth_date' => date('Y-m-d'),
                 'created' => date('Y-m-d H:i:s'),
                 'modified' => date('Y-m-d H:i:s')
@@ -70,7 +66,6 @@ class UsersSeed extends AbstractSeed
                 'password' => (new DefaultPasswordHasher)->hash('1'),
                 'status' => 1,
                 'cpf' => '512.873.166-97',
-                'plan_id' => 3,
                 'birth_date' => date('Y-m-d'),
                 'created' => date('Y-m-d H:i:s'),
                 'modified' => date('Y-m-d H:i:s')

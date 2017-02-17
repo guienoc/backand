@@ -48,12 +48,6 @@ class CreateUsers extends AbstractMigration
             'limit' => 15,
             'null' => false,
         ]);
-        $table->addColumn('plan_id', 'integer', [
-            'default' => null,
-            'limit' => 11,
-            'null' => false,
-            'signed' => false,
-        ]);
         $table->addColumn('birth_date', 'date', [
             'default' => null,
             'null' => false,

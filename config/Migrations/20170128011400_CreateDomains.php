@@ -34,6 +34,12 @@ class CreateDomains extends AbstractMigration
             'null' => false,
             'signed' => false,
         ]);
+        $table->addColumn('plan_id', 'integer', [
+            'default' => null,
+            'limit' => 11,
+            'null' => false,
+            'signed' => false,
+        ]);        
         $table->addColumn('created', 'datetime', [
             'default' => null,
             'null' => false,
@@ -42,7 +48,6 @@ class CreateDomains extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
-
         $table->addColumn('expiration_date', 'date', [
             'default' => null,
             'null' => false,
