@@ -24,7 +24,7 @@ $this->assign('title','Backand Admin - Meus Domínios');
                         <ul class="main-menu pull-right no-margin">
                             <li class="menu-item">
                                 <?php
-                                echo $this->Form->text('name',['placeholder' => 'Novo Domínio: ','label' => false,'class' => 'wpc-btn email-input']);
+                                echo $this->Form->text('name',['placeholder' => 'Nome do domínio','label' => false,'class' => 'input']);
                                 ?>
                             </li>
                             <li class="menu-item active">

@@ -36,6 +36,12 @@ class SiteController extends AppController
         $user = $this->Users->newEntity();
         $this->set(compact('user'));
     }
+    public function areaDoCliente()
+    {
+        $this->loadModel('Users');
+        $user = $this->Users->newEntity();
+        $this->set(compact('user'));
+    }
     public function sendLogin()
     {
         if ($this->request->is('post')) {
