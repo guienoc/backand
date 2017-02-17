@@ -17,9 +17,8 @@ $this->assign('title','Backand Admin - Meus Domínios');
 <div class="wpc-cart">
     <div class="container">
         <div class="row">       
-            <div class="col-sm-12 no-padding">
+            <div class="col-sm-12 text-right">
                 <?= $this->Form->create($domain,['url' => ['controller' => 'MeusSites', 'action' => 'adicionar']]) ?>
-
                     <nav class="wpc-nav-menu">
                         <ul class="main-menu pull-right no-margin">
                             <li class="menu-item">
@@ -32,9 +31,14 @@ $this->assign('title','Backand Admin - Meus Domínios');
                             </li>
                         </ul>
                     </nav>
+
+                <?php
+                echo $this->Form->text('name',['placeholder' => 'Novo Domínio: ','label' => false,'class' => 'wpc-btn email-input']);
+                ?>
+                <button class="wpc-btn"  type="submit"> ADICIONAR</button>
                 <?= $this->Form->end() ?> 
             </div>       
-        </div>
+        </div><br/>
         <div class="row">
             <div class="col-sm-12 no-padding">
                 <div class="table-responsive">
