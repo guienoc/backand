@@ -8,31 +8,37 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
     protected $Session;
-    protected $auth_user;
-    protected $base;
-    protected $controller;
-    protected $action;
-
     public function initialize()
     {
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth');
+        $this->loadComponent('Auth', [
+            'loginAction' => [
+                'prefix' => false,
+                'controller' => 'Site',
+                'action' => 'areaDoCliente',
+            ]
+        ]);
         $this->loadComponent('Security');
         $this->loadComponent('Csrf');
         
         $this->Session = $this->request->session();
     }
 
+    public function beforeFilter(Event $event)
+    {
+        $auth_user = $this->Auth->user();
+        $this->set(compact('auth_user'));
+    }
+
     public function beforeRender(Event $event)
     {
-        $auth_user = $this->Auth->user();        
         $base = 'http://' . getenv('HTTP_HOST');
         $controller = $this->request->controller;
         $action = $this->request->action;
-        $this->set(compact('base','controller','action','auth_user'));
+        $this->set(compact('base','controller','action'));
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
