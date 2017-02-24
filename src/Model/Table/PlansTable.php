@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Plans Model
  *
- * @property \Cake\ORM\Association\HasMany $Users
+ * @property \Cake\ORM\Association\HasMany $Domains
  *
  * @method \App\Model\Entity\Plan get($primaryKey, $options = [])
  * @method \App\Model\Entity\Plan newEntity($data = null, array $options = [])
@@ -17,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Plan|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\Plan patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Plan[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Plan findOrCreate($search, callable $callback = null)
+ * @method \App\Model\Entity\Plan findOrCreate($search, callable $callback = null, $options = [])
  */
 class PlansTable extends Table
 {
@@ -58,7 +58,7 @@ class PlansTable extends Table
             ->notEmpty('name');
 
         $validator
-            ->numeric('price')
+            ->decimal('price')
             ->requirePresence('price', 'create')
             ->notEmpty('price');
 

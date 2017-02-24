@@ -11,11 +11,11 @@ use Cake\ORM\Entity;
  * @property string $username
  * @property string $password
  * @property int $status
- * @property int $plan_id
  * @property string $cpf
  * @property \Cake\I18n\Time $birth_date
+ * @property \Cake\I18n\Time $created
+ * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\Plan $plan
  * @property \App\Model\Entity\Domain[] $domains
  */
 class User extends Entity

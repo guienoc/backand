@@ -9,11 +9,10 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property float $price
- * @property int $number_of_domains
  * @property string $description
  * @property int $order
  *
- * @property \App\Model\Entity\User[] $users
+ * @property \App\Model\Entity\Domain[] $domains
  */
 class Plan extends Entity
 {

@@ -25,8 +25,8 @@ class PlansTableTest extends TestCase
      */
     public $fixtures = [
         'app.plans',
-        'app.users',
-        'app.domains'
+        'app.domains',
+        'app.users'
     ];
 
     /**
